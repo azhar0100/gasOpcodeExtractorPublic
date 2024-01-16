@@ -1,3 +1,4 @@
+import json
 from pprint import pprint
 import requests
 import re
@@ -26,6 +27,7 @@ for k,vs in opcode_lines_with_instruction_code:
     dict_opcode_list.setdefault(k,[])
     dict_opcode_list[k] += vs
 
-dict_opcode_list = {k:set(vs) for k,vs in dict_opcode_list.items()}
-wi
+dict_opcode_list = {k:sorted(list(set(vs))) for k,vs in dict_opcode_list.items()}
+with open('gas_codes.json','w') as f:
+    json.dump(dict_opcode_list,f,indent=2)
 pprint(dict_opcode_list)
