@@ -20,7 +20,8 @@ opcode_lines = opcode_text.split('\n')
 
 opcode_lines = [x for x in opcode_lines if x.startswith('syn keyword')]
 # print("\n".join(opcode_lines))
-opcode_lines_stripped_of_begin_words = [x[len('syn keyword gasOpcode_'):] for x in opcode_lines]
+opcode_lines_stripped_of_begin_words = [x.replace('syn keyword ','') for x in opcode_lines]
+# opcode_lines_stripped_of_begin_words = [x for x in opcode_lines]
 opcode_lines_with_instruction_code = [(x.split()[0],x.split()[1:]) for x in opcode_lines_stripped_of_begin_words]
 dict_opcode_list = {}
 for k,vs in opcode_lines_with_instruction_code:

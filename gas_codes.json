@@ -1,5 +1,5 @@
 {
-  "ve": [
+  "gasDirective": [
     ".ABORT",
     ".abort",
     ".align",
@@ -112,7 +112,7 @@
     ".weak",
     ".weakref"
   ],
-  "veStore": [
+  "gasDirectiveStore": [
     ".ascii",
     ".asciz",
     ".byte",
@@ -131,7 +131,7 @@
     ".string8",
     ".word"
   ],
-  "veMacro": [
+  "gasDirectiveMacro": [
     ".altmacro",
     ".endfunc",
     ".endm",
@@ -140,7 +140,7 @@
     ".macro",
     ".noaltmacro"
   ],
-  "veX86": [
+  "gasDirectiveX86": [
     ".att_mnemonic",
     ".att_syntax",
     ".code16",
@@ -150,7 +150,7 @@
     ".intel_syntax",
     ".lcomm"
   ],
-  "rX86": [
+  "gasRegisterX86": [
     "%ah",
     "%al",
     "%ax",
@@ -198,12 +198,12 @@
     "%spl",
     "%ss"
   ],
-  "veStoreARM": [
+  "gasDirectiveStoreARM": [
     ".2byte",
     ".4byte",
     ".8byte"
   ],
-  "veARM": [
+  "gasDirectiveARM": [
     ".arch",
     ".arch_expression",
     ".arm",
@@ -247,19 +247,19 @@
     ".unwind_raw",
     ".vsave"
   ],
-  "rARM": [
+  "gasRegisterARM": [
     "lr",
     "pc",
     "sp"
   ],
-  "veMacroARM": [
+  "gasDirectiveMacroARM": [
     ".dn",
     ".dq",
     ".req",
     ".tlsdescseq",
     ".unreq"
   ],
-  "SSE2": [
+  "gasOpcode_SSE2": [
     "addpd",
     "addpdb",
     "addpdl",
@@ -882,7 +882,7 @@
     "xorpdq",
     "xorpdw"
   ],
-  "X64_SSE2": [
+  "gasOpcode_X64_SSE2": [
     "cvtsd2si",
     "cvtsd2sib",
     "cvtsd2sil",
@@ -897,7 +897,7 @@
     "movmskpd",
     "movq"
   ],
-  "Base": [
+  "gasOpcode_Base": [
     "cmppd",
     "cmppdb",
     "cmppdl",
@@ -1000,10 +1000,10 @@
     "psignwq",
     "psignww"
   ],
-  "X64_SSE42": [
+  "gasOpcode_X64_SSE42": [
     "crc32"
   ],
-  "SSE42": [
+  "gasOpcode_SSE42": [
     "pcmpestri",
     "pcmpestrib",
     "pcmpestril",
@@ -1030,7 +1030,7 @@
     "pcmpistrmq",
     "pcmpistrmw"
   ],
-  "NEHALEM_Base": [
+  "gasOpcode_NEHALEM_Base": [
     "movbe",
     "movbeb",
     "movbel",
@@ -1050,7 +1050,7 @@
     "xsavew",
     "xsetbv"
   ],
-  "AMD_SSE5": [
+  "gasOpcode_AMD_SSE5": [
     "comeqpd",
     "comeqpdb",
     "comeqpdl",
@@ -2472,7 +2472,7 @@
     "vpshlwq",
     "vpshlww"
   ],
-  "KATMAI_Base": [
+  "gasOpcode_KATMAI_Base": [
     "getsec",
     "prefetchnta",
     "prefetchntab",
@@ -2496,7 +2496,7 @@
     "prefetcht2w",
     "sfence"
   ],
-  "FUTURE_FMA": [
+  "gasOpcode_FUTURE_FMA": [
     "vfmadd123pd",
     "vfmadd123pdb",
     "vfmadd123pdl",
@@ -3098,7 +3098,7 @@
     "vfnmsub321ssq",
     "vfnmsub321ssw"
   ],
-  "X64_Base": [
+  "gasOpcode_X64_Base": [
     "bsf",
     "bsr",
     "bswap",
@@ -3339,7 +3339,7 @@
     "xadd",
     "xchg"
   ],
-  "PENT_3DNOW": [
+  "gasOpcode_PENT_3DNOW": [
     "femms",
     "pavgusb",
     "pavgusbb",
@@ -3481,7 +3481,7 @@
     "pswapdq",
     "pswapdw"
   ],
-  "8086_Base": [
+  "gasOpcode_8086_Base": [
     "aaa",
     "aad",
     "aadb",
@@ -3721,7 +3721,7 @@
     "xlat",
     "xlatb"
   ],
-  "386_Base": [
+  "gasOpcode_386_Base": [
     "adc",
     "adcb",
     "adcl",
@@ -3847,7 +3847,7 @@
     "xorq",
     "xorw"
   ],
-  "286_Base": [
+  "gasOpcode_286_Base": [
     "arpl",
     "clts",
     "ffreep",
@@ -3881,7 +3881,7 @@
     "verr",
     "verw"
   ],
-  "PENT_Base": [
+  "gasOpcode_PENT_Base": [
     "bb0_reset",
     "bb1_reset",
     "cmpxchg8b",
@@ -3905,7 +3905,7 @@
     "xsha256",
     "xstore"
   ],
-  "486_Base": [
+  "gasOpcode_486_Base": [
     "cmpxchg486",
     "invd",
     "invlpg",
@@ -3946,7 +3946,7 @@
     "svtsw",
     "wbinvd"
   ],
-  "P6_Base": [
+  "gasOpcode_P6_Base": [
     "dmint",
     "fcmovb",
     "fcmovbe",
@@ -3970,7 +3970,7 @@
     "sysret",
     "wrshr"
   ],
-  "PENT_MMX": [
+  "gasOpcode_PENT_MMX": [
     "emms",
     "packssdw",
     "packssdwb",
@@ -4253,7 +4253,7 @@
     "pxorq",
     "pxorw"
   ],
-  "186_Base": [
+  "gasOpcode_186_Base": [
     "enter",
     "enterb",
     "enterl",
@@ -4274,7 +4274,7 @@
     "ud2a",
     "ud2b"
   ],
-  "PRESCOTT_Base": [
+  "gasOpcode_PRESCOTT_Base": [
     "fisttp",
     "fisttpb",
     "fisttpl",
@@ -4283,14 +4283,14 @@
     "monitor",
     "mwait"
   ],
-  "X86_64_Base": [
+  "gasOpcode_X86_64_Base": [
     "invlpga",
     "rdtscp"
   ],
-  "IA64_Base": [
+  "gasOpcode_IA64_Base": [
     "jmpe"
   ],
-  "X64_SSE": [
+  "gasOpcode_X64_SSE": [
     "cvtsi2ss",
     "cvtss2si",
     "cvtss2sib",
@@ -4305,13 +4305,13 @@
     "movd",
     "movmskps"
   ],
-  "X64_MMX": [
+  "gasOpcode_X64_MMX": [
     "movq"
   ],
-  "PENTM_Base": [
+  "gasOpcode_PENTM_Base": [
     "rsm"
   ],
-  "SANDYBRIDGE_AVX": [
+  "gasOpcode_SANDYBRIDGE_AVX": [
     "vaddpd",
     "vaddpdb",
     "vaddpdl",
@@ -6290,7 +6290,7 @@
     "vzeroall",
     "vzeroupper"
   ],
-  "HASWELL_AVX2": [
+  "gasOpcode_HASWELL_AVX2": [
     "vbroadcasti128",
     "vbroadcastsd",
     "vbroadcastsdb",
@@ -6330,7 +6330,7 @@
     "vpsrlvd",
     "vpsrlvq"
   ],
-  "P6_SSE": [
+  "gasOpcode_P6_SSE": [
     "fxrstor",
     "fxrstorb",
     "fxrstorl",
@@ -6342,7 +6342,7 @@
     "fxsaveq",
     "fxsavew"
   ],
-  "PRESCOTT_SSE3": [
+  "gasOpcode_PRESCOTT_SSE3": [
     "addsubpd",
     "addsubpdb",
     "addsubpdl",
@@ -6394,7 +6394,7 @@
     "movsldupq",
     "movsldupw"
   ],
-  "SSE": [
+  "gasOpcode_SSE": [
     "aesdec",
     "aesdecb",
     "aesdecl",
@@ -6451,7 +6451,7 @@
     "pclmulqdqq",
     "pclmulqdqw"
   ],
-  "KATMAI_MMX": [
+  "gasOpcode_KATMAI_MMX": [
     "maskmovq",
     "movntq",
     "movntqb",
@@ -6510,14 +6510,14 @@
     "psadbwq",
     "psadbww"
   ],
-  "KATMAI_MMX2": [
+  "gasOpcode_KATMAI_MMX2": [
     "pshufw",
     "pshufwb",
     "pshufwl",
     "pshufwq",
     "pshufww"
   ],
-  "KATMAI_SSE": [
+  "gasOpcode_KATMAI_SSE": [
     "addps",
     "addpsb",
     "addpsl",
@@ -6789,7 +6789,7 @@
     "xorpsq",
     "xorpsw"
   ],
-  "VMX": [
+  "gasOpcode_VMX": [
     "invept",
     "inveptb",
     "inveptl",
@@ -6825,7 +6825,7 @@
     "vmxonq",
     "vmxonw"
   ],
-  "X64_VMX": [
+  "gasOpcode_X64_VMX": [
     "vmload",
     "vmmcall",
     "vmread",
@@ -6833,7 +6833,7 @@
     "vmsave",
     "vmwrite"
   ],
-  "SSE41": [
+  "gasOpcode_SSE41": [
     "blendpd",
     "blendpdb",
     "blendpdl",
@@ -7055,7 +7055,7 @@
     "roundssq",
     "roundssw"
   ],
-  "X64_SSE41": [
+  "gasOpcode_X64_SSE41": [
     "extractps",
     "extractpsb",
     "extractpsl",
@@ -7082,7 +7082,7 @@
     "pinsrqq",
     "pinsrqw"
   ],
-  "AMD_SSE4A": [
+  "gasOpcode_AMD_SSE4A": [
     "extrq",
     "insertq",
     "movntsd",
@@ -7096,7 +7096,7 @@
     "movntssq",
     "movntssw"
   ],
-  "ARM_THUMB": [
+  "gasOpcode_ARM_THUMB": [
     "adc",
     "adcal",
     "adccc",
@@ -7720,7 +7720,7 @@
     "tstvc",
     "tstvs"
   ],
-  "AVR": [
+  "gasOpcode_AVR": [
     "adc",
     "add",
     "adiw",

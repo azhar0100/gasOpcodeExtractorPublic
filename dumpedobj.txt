@@ -1,0 +1,100 @@
+
+lib.linux-x86_64-3.11/paddle/base/libpaddle.so:     file format elf64-x86-64
+
+
+Disassembly of section .note.gnu.property:
+
+00000000000002e0 <.note.gnu.property>:
+ 2e0:	04 00                	add    $0x0,%al
+ 2e2:	00 00                	add    %al,(%rax)
+ 2e4:	10 00                	adc    %al,(%rax)
+ 2e6:	00 00                	add    %al,(%rax)
+ 2e8:	05 00 00 00 47       	add    $0x47000000,%eax
+ 2ed:	4e 55                	rex.WRX push %rbp
+ 2ef:	00 02                	add    %al,(%rdx)
+ 2f1:	00 00                	add    %al,(%rax)
+ 2f3:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
+ 2f7:	00 03                	add    %al,(%rbx)
+ 2f9:	00 00                	add    %al,(%rax)
+ 2fb:	00 00                	add    %al,(%rax)
+ 2fd:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .note.gnu.build-id:
+
+0000000000000300 <.note.gnu.build-id>:
+ 300:	04 00                	add    $0x0,%al
+ 302:	00 00                	add    %al,(%rax)
+ 304:	14 00                	adc    $0x0,%al
+ 306:	00 00                	add    %al,(%rax)
+ 308:	03 00                	add    (%rax),%eax
+ 30a:	00 00                	add    %al,(%rax)
+ 30c:	47                   	rex.RXB
+ 30d:	4e 55                	rex.WRX push %rbp
+ 30f:	00 5a f2             	add    %bl,-0xe(%rdx)
+ 312:	a5                   	movsl  %ds:(%rsi),%es:(%rdi)
+ 313:	a9 a6 2a c7 ce       	test   $0xcec72aa6,%eax
+ 318:	71 46                	jno    360 <_ZN6googleL15thread_msg_dataE+0x330>
+ 31a:	b5 0d                	mov    $0xd,%ch
+ 31c:	8d                   	(bad)  
+ 31d:	cc                   	int3   
+ 31e:	6b 19 03             	imul   $0x3,(%rcx),%ebx
+ 321:	52                   	push   %rdx
+ 322:	bf                   	.byte 0xbf
+ 323:	b8                   	.byte 0xb8
+
+Disassembly of section .gnu.hash:
+
+0000000000000328 <.gnu.hash>:
+     328:	03 80 00 00 bc 0f    	add    0xfbc0000(%rax),%eax
+     32e:	00 00                	add    %al,(%rax)
+     330:	00 40 00             	add    %al,0x0(%rax)
+     333:	00 14 00             	add    %dl,(%rax,%rax,1)
+     336:	00 00                	add    %al,(%rax)
+     338:	20 60 41             	and    %ah,0x41(%rax)
+     33b:	8a 02                	mov    (%rdx),%al
+     33d:	0c 40                	or     $0x40,%al
+     33f:	00 00                	add    %al,(%rax)
+     341:	a4                   	movsb  %ds:(%rsi),%es:(%rdi)
+     342:	00 93 29 21 00 80    	add    %dl,-0x7fffded7(%rbx)
+     348:	30 80 10 00 14 01    	xor    %al,0x1140010(%rax)
+     34e:	86 00                	xchg   %al,(%rax)
+     350:	44 6c                	rex.R insb (%dx),%es:(%rdi)
+     352:	d9 14 83             	fsts   (%rbx,%rax,4)
+     355:	8d b0 00 31 84 12    	lea    0x12843100(%rax),%esi
+     35b:	94                   	xchg   %eax,%esp
+     35c:	01 14 40             	add    %edx,(%rax,%rax,2)
+     35f:	80 1c 54 00          	sbbb   $0x0,(%rsp,%rdx,2)
+     363:	08 34 42             	or     %dh,(%rdx,%rax,2)
+     366:	21 41 44             	and    %eax,0x44(%rcx)
+     369:	16                   	(bad)  
+     36a:	2b 8e 41 bb 39 40    	sub    0x4039bb41(%rsi),%ecx
+     370:	02 12                	add    (%rdx),%dl
+     372:	04 40                	add    $0x40,%al
+     374:	90                   	nop
+     375:	04 00                	add    $0x0,%al
+     377:	08 d9                	or     %bl,%cl
+     379:	00 a0 19 02 68 04    	add    %ah,0x4680219(%rax)
+     37f:	20 10                	and    %dl,(%rax)
+     381:	21 00                	and    %eax,(%rax)
+     383:	08 10                	or     %dl,(%rax)
+     385:	08 a0 03 00 13 c3    	or     %ah,-0x3cecfffd(%rax)
+     38b:	c4                   	(bad)  
+     38c:	12 40 5a             	adc    0x5a(%rax),%al
+     38f:	90                   	nop
+     390:	78 be                	js     350 <_ZN6googleL15thread_msg_dataE+0x320>
+     392:	00 48 80             	add    %cl,-0x80(%rax)
+     395:	42 0c 48             	rex.X or $0x48,%al
+     398:	84 04 85 16 40 80 2a 	test   %al,0x2a804016(,%rax,4)
+     39f:	04 04                	add    $0x4,%al
+     3a1:	01 41 00             	add    %eax,0x0(%rcx)
+     3a4:	29 d1                	sub    %edx,%ecx
+     3a6:	80 00 89             	addb   $0x89,(%rax)
+     3a9:	02 a0 90 25 30 20    	add    0x20302590(%rax),%ah
+     3af:	41 00 22             	add    %spl,(%r10)
+     3b2:	b9 a3 c1 44 ce       	mov    $0xce44c1a3,%ecx
+     3b7:	02 01                	add    (%rcx),%al
+     3b9:	21 52 08             	and    %edx,0x8(%rdx)
+     3bc:	80 80 98 00 00 e0 00 	addb   $0x0,-0x1fffff68(%rax)
+     3c3:	c3                   	ret    
+     3c4:	70 50                	jo     416 <_ZN6googleL15thread_msg_dataE+0x3e6>
