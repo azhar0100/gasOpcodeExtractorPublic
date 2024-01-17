@@ -2,6 +2,8 @@ import json
 import argparse
 from pprint import pprint
 
+from tqdm import tqdm
+
 def separate_dumped_data_sections(objdumped_data):
     sections = []
     section = []
@@ -37,7 +39,7 @@ def main(file_path, dumped_obj_file):
     with open(dumped_obj_file, "r") as file:
         objdumped_data = file.readlines()
 
-    extracted_instruction_set_data = [[identify_all_instruction_sets_in_instruction_line_using_faster_lookup_data(x, faster_lookup_data) for x in find_instruction_lines_in_section(section)] for section in separate_dumped_data_sections(objdumped_data)]
+    extracted_instruction_set_data = [[identify_all_instruction_sets_in_instruction_line_using_faster_lookup_data(x, faster_lookup_data) for x in find_instruction_lines_in_section(section)] for section in tqdm(separate_dumped_data_sections(objdumped_data),desc=f"reading sections from {dumped_obj_file}")]
     extracted_instruction_set_data_flattened = sorted(list(set([x1 for x3 in extracted_instruction_set_data for x2 in x3 for x1 in x2])))
     pprint(extracted_instruction_set_data_flattened)
 
