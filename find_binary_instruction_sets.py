@@ -1,5 +1,5 @@
 import json
-import sys
+import argparse
 from pprint import pprint
 
 def separate_dumped_data_sections(objdumped_data):
@@ -42,9 +42,8 @@ def main(file_path, dumped_obj_file):
     pprint(extracted_instruction_set_data_flattened)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python find_binary_instruction_sets.py <file_path> <dumped_obj_file>")
-    else:
-        file_path = sys.argv[1]
-        dumped_obj_file = sys.argv[2]
-        main(file_path, dumped_obj_file)
+    parser = argparse.ArgumentParser(description='Find binary instruction sets.')
+    parser.add_argument('file_path', type=str, help='Path to the file')
+    parser.add_argument('dumped_obj_file', type=str, help='Path to the dumped object file')
+    args = parser.parse_args()
+    main(args.file_path, args.dumped_obj_file)
