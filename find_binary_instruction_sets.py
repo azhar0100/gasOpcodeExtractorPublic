@@ -41,7 +41,9 @@ def main(file_path, dumped_obj_file):
 
     extracted_instruction_set_data = [[identify_all_instruction_sets_in_instruction_line_using_faster_lookup_data(x, faster_lookup_data) for x in find_instruction_lines_in_section(section)] for section in tqdm(separate_dumped_data_sections(objdumped_data),desc=f"reading sections from {dumped_obj_file}")]
     extracted_instruction_set_data_flattened = sorted(list(set([x1 for x3 in extracted_instruction_set_data for x2 in x3 for x1 in x2])))
-    pprint(extracted_instruction_set_data_flattened)
+    print(f"{dumped_obj_file}:")
+    for instruction_set_name in extracted_instruction_set_data_flattened:
+        print(f"  - {instruction_set_name}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Find binary instruction sets.')
